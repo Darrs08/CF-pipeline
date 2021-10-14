@@ -1,12 +1,11 @@
-@Library('Shared') _
+@Library('shared-CF-lib') _
 pipeline {
     agent any
 	
 	environment {
             bucketName = "test-cf-bucket-1117"
-			stackFileName = "wp.yaml"
+	    stackFileName = "wp.yaml"
     }
-	
 	parameters { 
 		string(
 			name: 'ENV', 
@@ -18,21 +17,17 @@ pipeline {
 			defaultValue: 'myStack', 
 			description: 'Please insert the stack name'
 			)
-	}
-	
-    stages {
-     
+	}	
+    stages {     
 		stage("Push template to S3") {
 			steps {
 				uploadFilesToS3(stackFileName: "${stackFileName}", workingDir: "${env.WORKSPACE}/stack_templates", bucketName: "${bucketName}")
 			}
 		}
 		stage('Deploy Stack') {                  
-                steps {
-                    deploy_stack(stackName: "${stackName}", bucketName: "${bucketName}", stackFileName: "${stackFileName}", env: "${ENV}")
+                	steps {
+                    		deploy_stack(stackName: "${stackName}", bucketName: "${bucketName}", stackFileName: "${stackFileName}", env: "${ENV}")
                 }
-            }
-		
-		  
+            }				  
     }
-   }
+}

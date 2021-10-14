@@ -1,7 +1,6 @@
 @Library('shared-WP-lib') _
 pipeline {
-    agent any
-	
+    agent any	
 	environment {
             bucketName = "testbucket-darren"
 	    stackFileName = "wp.yml"

@@ -1,4 +1,4 @@
-@Library('shared-CF-lib') _
+@Library('shared-WP-lib') _
 pipeline {
     agent any
 	

@@ -1,4 +1,4 @@
-@Library('shared-WP-lib') _
+@Library('shared-WP-Lib') _
 pipeline {
     agent any	
 	environment {

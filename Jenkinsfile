@@ -3,8 +3,8 @@ pipeline {
     agent any
 	
 	environment {
-            bucketName = "test-cf-bucket-1117"
-	    stackFileName = "wp.yaml"
+            bucketName = "testbucket-darren"
+	    stackFileName = "wp.yml"
     }
 	parameters { 
 		string(

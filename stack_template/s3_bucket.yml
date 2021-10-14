@@ -1,0 +1,7 @@
+Resources:
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+Outputs:
+  S3Bucket:
+    Value: !Ref S3Bucket
+    Description: S3 Bucket for object storage

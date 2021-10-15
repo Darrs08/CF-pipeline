@@ -24,9 +24,9 @@ pipeline {
 			}
 		}
 		stage('Deploy Stack') {                  
-                	steps {
-                    		deploy_stack(stackName: "${stackName}", bucketName: "${bucketName}", stackFileName: "${stackFileName}", env: "${ENV}")
-                }
-            }				  
+            steps {
+				deploy_stack(stackName: "${stackName}", bucketName: "${bucketName}", stackFileName: "${stackFileName}", env: "${ENV}")
+            }
+        }				  
     }
 }

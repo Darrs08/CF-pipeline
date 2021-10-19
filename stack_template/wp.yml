@@ -5,7 +5,7 @@ Parameters:
   VpcId:
     Type: 'AWS::EC2::VPC::Id'
     Description: VpcId of your existing Virtual Private Cloud (VPC)
-    Default: "vpc-05d5f8515bdb0950a"
+    Default: "vpc-0c0aaa01e7b925bed"
     ConstraintDescription: must be the VPC Id of an existing Virtual Private Cloud.
   PublicSubnet1:
     Type: String
@@ -18,7 +18,7 @@ Parameters:
   KeyName:
     Description: Name of an existing EC2 KeyPair to enable SSH access to the instances
     Type: 'AWS::EC2::KeyPair::KeyName'
-    Default: catalin
+    Default: darren
     ConstraintDescription: must be the name of an existing EC2 KeyPair.
   InstanceType:
     Description: WebServer EC2 instance type

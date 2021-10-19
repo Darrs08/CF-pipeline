@@ -10,11 +10,11 @@ Parameters:
   PublicSubnet1:
     Type: String
     Description: The subnet where to launch the service
-    Default: "subnet-0727b8661b6cb3b47"
+    Default: "subnet-060175f4908d5c3ee"
   PublicSubnet2:
     Type: String
     Description: the subnet where to Launch the service
-    Default: "subnet-0685043b154443fe8"
+    Default: "subnet-07ef4041f59516e23"
   KeyName:
     Description: Name of an existing EC2 KeyPair to enable SSH access to the instances
     Type: 'AWS::EC2::KeyPair::KeyName'

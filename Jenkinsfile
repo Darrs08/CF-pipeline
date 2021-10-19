@@ -20,7 +20,7 @@ pipeline {
 			)
 	}	
     stages {     
-	stage("Push template to S3") {
+		stage("Push template to S3") {
 			steps {
 				uploadFilesToS3(stackFileName: "${stackFileName}", workingDir: "${env.WORKSPACE}/stack_template", bucketName: "${bucketName}")
 			}

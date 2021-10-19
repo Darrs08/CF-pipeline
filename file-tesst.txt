@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 test
+=======
+this is a test
+>>>>>>> 1ee03117429b0eb71a17b43c455dd77bc3ff7ab6

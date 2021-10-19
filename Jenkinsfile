@@ -2,7 +2,7 @@
 pipeline {
     agent any	
 	environment {
-		stackName = 'darren'
+		
             bucketName = "testbucket-darren"
 	    stackFileName = "wp.yml"
 		AWS_REGION = 'us-east-1'		
@@ -15,7 +15,7 @@ pipeline {
 			)
 		string(
 			name: 'stackName', 
-			defaultValue: 'myStack', 
+			defaultValue: 'myStack-darren', 
 			description: 'Please insert the stack name'
 			)
 	}	

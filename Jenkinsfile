@@ -4,7 +4,7 @@ pipeline {
 	environment {
             bucketName = "testbucket-darren"
 	    stackFileName = "wp.yml"
-		AWS_REGION = "us-east-1"		
+		AWS_REGION = 'us-east-1'		
     }
 	parameters { 
 		string(

@@ -5,7 +5,7 @@ Parameters:
   VpcId:
     Type: 'AWS::EC2::VPC::Id'
     Description: VpcId of your existing Virtual Private Cloud (VPC)
-    Default: "vpc-0c0aaa01e7b925bed"
+    Default: "vpc-053b338aed86f79f5"
     ConstraintDescription: must be the VPC Id of an existing Virtual Private Cloud.
   PublicSubnet1:
     Type: String

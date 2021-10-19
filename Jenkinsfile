@@ -25,12 +25,7 @@ pipeline {
 				uploadFilesToS3(stackFileName: "${stackFileName}", workingDir: "${env.WORKSPACE}/stack_template", bucketName: "${bucketName}")
 			}
 		}
-	    stage("Validate Template") {
-		    steps {
-				def response = cfnValidate(file: "${stackFileName}")
-				echo "template description: ${response.description}"
-		    }
-	    }
+	    
 		stage('Deploy Stack') {                  
             steps {
 				deploy_stack(stackName: "${stackName}", bucketName: "${bucketName}", stackFileName: "${stackFileName}", env: "${ENV}")

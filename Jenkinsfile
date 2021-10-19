@@ -15,7 +15,7 @@ pipeline {
 			)
 		string(
 			name: 'stackName', 
-			defaultValue: 'myStack-darren', 
+			defaultValue: 'darren', 
 			description: 'Please insert the stack name'
 			)
 	}	

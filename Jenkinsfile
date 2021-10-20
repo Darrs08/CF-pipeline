@@ -5,7 +5,7 @@ pipeline {
 		
             bucketName = "testbucket-darren"
 	    stackFileName = "wp.yml"
-		AWS_REGION = 'us-east-1'		
+	    awsRegion = 'us-east-1'		
     }
 	parameters { 
 		string(
@@ -22,7 +22,7 @@ pipeline {
     stages {     
 		stage("Push template to S3") {
 			steps {
-				uploadFilesToS3(stackFileName: "${stackFileName}", workingDir: "${env.WORKSPACE}/stack_template", bucketName: "${bucketName}")
+				uploadFilesToS3(Region: "${awsRegion}", stackFileName: "${stackFileName}", workingDir: "${env.WORKSPACE}/stack_template", bucketName: "${bucketName}")
 			}
 		}
 	    

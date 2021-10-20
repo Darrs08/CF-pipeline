@@ -42,7 +42,7 @@ pipeline {
 					env: "${ENV}",
 					VpcId: "${VpcId}",
 					PublicSubnet1: "${PSubnet1}",
-					VpcId: "${PSubnet2}"
+					PublicSubnet2: "${PSubnet2}"
 				)
             }
         }				  

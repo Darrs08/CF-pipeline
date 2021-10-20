@@ -22,7 +22,12 @@ pipeline {
     stages {     
 		stage("Push template to S3") {
 			steps {
-				uploadFilesToS3(Region: "${awsRegion}", stackFileName: "${stackFileName}", workingDir: "${env.WORKSPACE}/stack_template", bucketName: "${bucketName}")
+				uploadFilesToS3(
+					Region: "${awsRegion}",
+					stackFileName: "${stackFileName}",
+					workingDir: "${env.WORKSPACE}/stack_template",
+					bucketName: "${bucketName}"
+				)
 			}
 		}
 	    
